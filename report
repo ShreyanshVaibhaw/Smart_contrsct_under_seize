@@ -1,0 +1,63 @@
+1. Introduction
+Smart contracts are self-executing programs on the blockchain that facilitate, verify, or enforce the negotiation of a contract. While they offer transparency and trustless execution, their immutability and open-source nature can expose them to various attacks. This paper examines the evolving landscape of smart contract security and outlines common vulnerabilities that can lead to financial loss or system compromise.
+
+2. Methodology
+The research methodology includes:
+
+Literature Review: Evaluation of whitepapers, blockchain forensics reports, and academic articles.
+
+Case Study Analysis: In-depth examination of well-known smart contract attacks.
+
+Classification: Categorization of vulnerabilities based on source and impact.
+
+Tool Review: Exploration of tools like Mythril, Oyente, and Slither for vulnerability detection.
+
+3. Real-World Incidents
+Several high-profile attacks have exposed critical flaws in smart contract design:
+
+The DAO Hack (2016): Exploited reentrancy vulnerability, resulting in ~$60 million loss.
+
+Parity Wallet Bugs (2017): Mismanagement of wallet library led to frozen funds worth over $150 million.
+
+bZx Attack (2020): Leveraged flash loans and oracle manipulation to extract ~$1 million.
+
+These examples underscore the importance of secure coding and thorough testing before deployment.
+
+4. Common Vulnerabilities
+Smart contracts may contain several vulnerabilities that can be classified into the following categories:
+
+4.1 Reentrancy
+Occurs when an external contract is called before the original contract’s state is updated. Exploiters can recursively drain funds.
+
+4.2 Integer Overflow/Underflow
+Results from exceeding the maximum or minimum value a variable can hold, allowing malicious manipulation of contract logic.
+
+4.3 Unchecked Call Return Values
+Failing to verify the success of low-level call() operations can result in unintended behaviors.
+
+4.4 Denial of Service (DoS)
+Attackers can consume excessive gas or block access to resources, disabling contract functionality.
+
+4.5 Oracle Manipulation
+Since smart contracts rely on external data feeds (oracles), attackers can manipulate these to their advantage in DeFi systems.
+
+5. Detection and Prevention
+To combat smart contract vulnerabilities, developers can implement the following:
+
+Use of Static Analysis Tools: Tools like Slither, Mythril, and Oyente identify bugs pre-deployment.
+
+Formal Verification: Mathematically proving the correctness of smart contract logic.
+
+Security Audits: Hiring third-party auditors to review code.
+
+Bug Bounties: Encouraging ethical hackers to find and report vulnerabilities.
+
+6. Legal and Ethical Implications
+As smart contracts manage billions in assets, failure to secure them raises serious legal concerns. Accountability becomes complex in decentralized systems. Regulation must balance innovation with security, ensuring contracts comply with global legal standards.
+
+7. Future Scope
+With advancements in AI and formal methods, the development of more intelligent auditing systems is expected. Integration with decentralized identity (DID) systems and privacy-preserving computation could add further layers of security.
+
+8. Conclusion
+Smart contracts revolutionize digital trust but also pose significant security risks. A combination of robust coding practices, automated detection tools, and regulatory frameworks is essential to safeguard the next generation of blockchain applications.
+
